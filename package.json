@@ -1,0 +1,39 @@
+{
+  "name": "online_shopping",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "online shopping website",
+  "main": "index.js",
+  "scripts": {
+    "build":"cd frontend && npm install && npm run build",
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuqingyi86/onlineShopping.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liuqingyi86/onlineShopping/issues"
+  },
+  "homepage": "https://github.com/liuqingyi86/onlineShopping#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.14",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-plugin-react": "^7.24.0"
+  },
+  "engines":{
+    "node": "4.17.0",
+    "npm":"7.17.0"
+  }
+
+}

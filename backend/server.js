@@ -42,7 +42,7 @@ const __dirname = path.resolve(); // return current folder
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 // serve the react file
-app.use(express.static(path.join(__dirname, "/frontend/bulid")));
+app.use(express.static(path.join(__dirname, "/frontend/build")));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/frontend/build/index.html"));
 });

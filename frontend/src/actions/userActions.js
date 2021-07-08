@@ -83,7 +83,7 @@ export const detailsUser = (userId) => async (dispatch, getState) => {
   try {
     const { data } = await axios.get(`/api/users/${userId}`, {
       headers: {
-        Authorization: `Bearer ${userInfo.token}`,
+        Authorization: `Bearer ${userInfo?.token}`,
       },
     });
     dispatch({ type: USER_DETAILS_SUCCESS, payload: data });

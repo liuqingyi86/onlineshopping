@@ -10,7 +10,8 @@ const productRouter = express.Router();
 productRouter.get(
   "/",
   expressAsyncHandler(async (req, res) => {
-    const pageSize = 3;
+    //const pageSize = 3;
+    const pageSize = !req.query.pageNumber ? 20 : 3;
     const page = Number(req.query.pageNumber) || 1;
 
     const name = req.query.name || "";
@@ -20,7 +21,7 @@ productRouter.get(
     const min =
       req.query.min || Number(req.query.min) !== 0 ? Number(req.query.min) : 0;
     const max =
-      req.query.min || Number(req.query.max) !== 0 ? Number(req.query.max) : 0;
+      req.query.max || Number(req.query.max) !== 0 ? Number(req.query.max) : 0;
 
     const rating =
       req.query.rating || Number(req.query.rating) !== 0
